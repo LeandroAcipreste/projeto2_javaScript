@@ -8,11 +8,10 @@ form.addEventListener('submit', function(e){
 })
 
 let linhas = ''
+let telNumber = document.getElementById('number-tel');
+let contactName = document.getElementById('name');
 
 function addLInha (){
-
-    const telNumber = document.getElementById('number-tel');
-    const contactName = document.getElementById('name');
 
     let linha = '<tr>';
         linha += `<td>${telNumber.value}</td>`;
@@ -42,3 +41,13 @@ function messageSuccsess (){
 
     return message;
 } 
+
+
+
+telNumber.addEventListener('focus', function(){
+    const hideSpan = document.querySelector('span');
+    const message = ''
+
+    hideSpan.innerHTML = message;
+});
+
